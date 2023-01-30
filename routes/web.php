@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('edit-task/{id}', [TaskController::class, 'editTask'])->name('edit.task');
+Route::post('save-task', [TaskController::class, 'saveTask'])->name('save.task');
+Route::get('tasks/{id}', [TaskController::class, 'deleteTask'])->name('delete.task');
+
+

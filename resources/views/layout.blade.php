@@ -5,8 +5,9 @@
       display: none !important;
     }
   </style>
+   @livewireStyles
 </head>
 <body>
-
+  @livewireScripts
 </body>
 </html>
